@@ -5,6 +5,18 @@ Found [here](https://neetcode.io/roadmap)
 
 It also contains a Vitest testing suite to test the implementations.
 
+# Problem list in roadmap 
+## Arrays & Hashing
+
+**Easy**
+* Contains Duplicate
+* Valid Anagram
+* Two Sum
+* Valid Palindrome
+* Valid Parenthesis
+* Binary Search
+
+
 # Installation
 1. Clone the repository
 ```bash
