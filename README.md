@@ -16,6 +16,8 @@ It also contains a Vitest testing suite to test the implementations.
 * Valid Parenthesis
 * Binary Search
 
+**Medium**
+* Group Anagrams
 
 # Installation
 1. Clone the repository
