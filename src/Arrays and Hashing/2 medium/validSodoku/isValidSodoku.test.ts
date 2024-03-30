@@ -129,5 +129,5 @@ test('complete invalid sodoku', () => {
         [".", ".", ".", ".", ".", ".", ".", "1", "."],
         ["4", ".", ".", ".", "1", ".", ".", ".", "9"]
     ]
-    expect(isValidBox(board, [0,0])).toEqual(false);
+    expect(isValidBox(board, [6,7])).toEqual(false);
 })
