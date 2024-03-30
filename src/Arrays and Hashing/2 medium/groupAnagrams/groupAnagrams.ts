@@ -8,16 +8,16 @@
 export function groupAnagrams(strgs: string[]): string[][] {
     const anagrams:{[key: string]: (string[])} = {};
 
+    // iterate through strings
     for (const word of strgs) {
         const sortedWord = word.split('').sort().join('');
         const selectedAnagrams = anagrams[sortedWord];
 
         if (!selectedAnagrams) {
             anagrams[sortedWord] = [word];
-            continue;
+        } else {
+            selectedAnagrams.push(word);
         }
-
-        selectedAnagrams.push(word);
     }
 
     return Object.values(anagrams);

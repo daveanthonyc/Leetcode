@@ -7,6 +7,21 @@
 // determine order of which highest
 // all unique numbers in array, sorted in most frequent to least -> return slice(0,k)
 
-export function topKFrequent(nums: number[], k: number): number[] {
+// The ideas I had:
+// I had the idea of creating a map w frequency of unique numbers   
+// X know how to convert map to 2D array and sort by the values
 
+export function topKFrequent(nums: number[], k: number) {
+    const frequency = new Map();
+
+    for (const num of nums) {
+        frequency.set(num, (frequency.get(num) || 0) + 1)
+    }
+
+    const kFrequentNums = Array.from(frequency.entries())
+        .sort((a,b) => b[1] - a[1])
+        .slice(0,k)
+        .map((pair) => pair[0]);
+
+    return kFrequentNums;
 }

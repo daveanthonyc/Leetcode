@@ -7,13 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "dv": "nodemon ./src/main.ts"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "nodemon": "^3.1.0",
     "vitest": "^1.4.0"
   }
 }
