@@ -8,5 +8,12 @@
 // all unique numbers in array, sorted in most frequent to least -> return slice(0,k)
 
 export function topKFrequent(nums: number[], k: number): number[] {
+    const map = new Map();
 
+    // iterate nums
+    for (const num of nums) {
+        map.set(num, (map.get(num) | 0) + 1);
+    }
+
+    return Array.from(map.entries()).sort((a,b) => b[1] - a[1]).slice(0,k).map(num => num[0]);
 }
